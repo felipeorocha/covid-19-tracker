@@ -42,6 +42,7 @@ module.exports = {
     'arrow-body-style': 'off',
     'arrow-parens': 'off',
     'no-console': ['error'],
+    'operator-linebreak': 'off',
     'consistent-return': 'off',
     'object-curly-newline': 'off',
     'react-hooks/rules-of-hooks': 'error',
