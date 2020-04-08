@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid } from '@material-ui/core';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import Card from '../Card';
 
 import styles from './cards.module.css';
 
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {
-    return <h3>Loading...</h3>;
+    return <CircularProgress />;
   }
   return (
     <div className={styles.container}>

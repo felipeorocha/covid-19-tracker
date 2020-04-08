@@ -8,3 +8,17 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+
+.logo {
+  width: 200px;
+}
+
+@media (max-width: 770px) {
+  .container {
+    margin: 0 15%;
+  }
+
+  .logo {
+    width: 50%;
+  }
+}
