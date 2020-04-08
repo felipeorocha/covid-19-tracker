@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import styles from './App.module.css';
 
@@ -8,27 +8,24 @@ import CountryPicker from './components/CountryPicker';
 
 import { fetchData } from './api';
 
-class App extends Component {
-  state = {
-    data: {},
-  }
+const App = () => {
+  const [data, setData] = useState({});
 
-  async componentDidMount() {
-    const data = await fetchData();
-    this.setState({ data })
-  }
+  useEffect(() => {
+    const fetchApiData = async () => {
+      setData(await fetchData());
+    };
 
-  render() {
-    const { data } = this.state;
+    fetchApiData();
+  }, []);
 
-    return (
-      <div className={styles.container}>
-        <Cards data={data} />
-        <Chart />
-        {/* <CountryPicker /> */}
-      </div>
-    );
-  }
-}
+  return (
+    <div className={styles.container}>
+      <Cards data={data} />
+      <Chart />
+      {/* <CountryPicker /> */}
+    </div>
+  );
+};
 
 export default App;
