@@ -49,7 +49,9 @@ const Card = ({ status, numbers, date, style }) => {
           <CountUp start={0} end={numbers} duration={3.5} separator="," />
         </StyledMainTypography>
         <StyledSecondaryTypography>{formattedDate}</StyledSecondaryTypography>
-        <StyledPrimaryTypography variant="body2">Numero de {status} por COVID-19</StyledPrimaryTypography>
+        <StyledPrimaryTypography variant="body2">
+          Numero de {status} por COVID-19
+        </StyledPrimaryTypography>
       </CardContent>
     </Grid>
   );
