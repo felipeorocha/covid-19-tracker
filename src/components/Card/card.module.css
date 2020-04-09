@@ -1,9 +1,11 @@
 .card {
   margin: 0 2% !important;
+  background-color: #1f1f1f !important;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 770px) and (orientation: portrait) {
  .card {
    margin: 4% 0 !important;
+   background-color: #1f1f1f !important;
  }
 }

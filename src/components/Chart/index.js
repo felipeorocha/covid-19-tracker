@@ -37,6 +37,24 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
             },
           ],
         }}
+        options={{
+          scales: {
+            xAxes: [
+              {
+                gridLines: {
+                  color: 'rgb(71, 71, 71)',
+                },
+              },
+            ],
+            yAxes: [
+              {
+                gridLines: {
+                  color: 'rgb(71, 71, 71)',
+                },
+              },
+            ],
+          },
+        }}
       />
     ) : null;
 
@@ -59,6 +77,22 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
       options={{
         legend: { display: false },
         title: { display: true, text: `Numero de casos: ${country}` },
+        scales: {
+          xAxes: [
+            {
+              gridLines: {
+                color: 'rgb(71, 71, 71)',
+              },
+            },
+          ],
+          yAxes: [
+            {
+              gridLines: {
+                color: 'rgb(71, 71, 71)',
+              },
+            },
+          ],
+        },
       }}
     />
   ) : null;
