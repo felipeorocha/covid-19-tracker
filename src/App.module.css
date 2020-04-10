@@ -12,11 +12,11 @@ body {
 }
 
 .logo {
-  width: 200px;
+  width: 150px;
   margin-top: 20px;
 }
 
-@media (max-width: 770px) and (orientation: portrait) {
+@media only screen and (max-width: 770px) {
   .container {
     margin: 0 15%;
   }

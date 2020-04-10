@@ -3,7 +3,7 @@
   background-color: #1f1f1f !important;
 }
 
-@media (max-width: 770px) and (orientation: portrait) {
+@media only screen and (max-width: 770px) {
  .card {
    margin: 4% 0 !important;
    background-color: #1f1f1f !important;

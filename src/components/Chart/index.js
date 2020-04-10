@@ -54,6 +54,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
               },
             ],
           },
+          responsive: true,
         }}
       />
     ) : null;

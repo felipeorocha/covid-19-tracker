@@ -1,33 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid } from '@material-ui/core';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import Card from '../Card';
 
 import styles from './cards.module.css';
 
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {
-    return <CircularProgress />;
+    return 'Loading...';
   }
+
   return (
     <div className={styles.container}>
       <Grid container spacing={3} justify="center">
         <Card
           numbers={confirmed.value}
-          style={styles.infected}
+          styling={styles.infected}
           status="Infectados"
           date={lastUpdate}
         />
         <Card
           numbers={recovered.value}
-          style={styles.recovered}
+          styling={styles.recovered}
           status="Curados"
           date={lastUpdate}
         />
         <Card
           numbers={deaths.value}
-          style={styles.deaths}
+          styling={styles.deaths}
           status="Mortos"
           date={lastUpdate}
         />
@@ -48,5 +48,6 @@ Cards.propTypes = {
 Cards.defaultProps = {
   data: {},
 };
+
 
 export default Cards;

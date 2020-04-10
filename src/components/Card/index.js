@@ -14,7 +14,7 @@ import { parseISO, format } from 'date-fns';
 
 import styles from './card.module.css';
 
-const Card = ({ status, numbers, date, style }) => {
+const Card = ({ status, numbers, date, styling }) => {
   const formattedDate = format(parseISO(date), "dd 'de' MMMM', às 'HH:mm'h'");
 
   const StyledPrimaryTypography = withStyles({
@@ -38,11 +38,11 @@ const Card = ({ status, numbers, date, style }) => {
   return (
     <Grid
       item
-      lg={3}
       xs={12}
+      sm={3}
       md={3}
       component={MaterialCard}
-      className={cx(styles.card, style)}
+      className={cx(styles.card, styling)}
     >
       <CardContent>
         <StyledPrimaryTypography gutterBottom>{status}</StyledPrimaryTypography>
@@ -62,14 +62,14 @@ Card.propTypes = {
   status: PropTypes.string,
   numbers: PropTypes.number,
   date: PropTypes.string,
-  style: PropTypes.string,
+  styling: PropTypes.string,
 };
 
 Card.defaultProps = {
   status: '',
   numbers: 0,
   date: '',
-  style: '',
+  styling: '',
 };
 
 export default Card;
