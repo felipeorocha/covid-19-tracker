@@ -38,9 +38,10 @@ const Card = ({ status, numbers, date, style }) => {
   return (
     <Grid
       item
-      component={MaterialCard}
+      lg={3}
       xs={12}
       md={3}
+      component={MaterialCard}
       className={cx(styles.card, style)}
     >
       <CardContent>
