@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'https://covid19.mathdro.id/api';
+const baseURL = process.env.REACT_APP_API_URL;
 
 export const fetchData = async country => {
   let urlMount = baseURL;
