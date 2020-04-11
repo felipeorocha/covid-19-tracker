@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { Cards, CountryPicker, Chart } from './components';
+import { Cards, CountryPicker, Chart, Footer } from './components';
 import { fetchData } from './api';
 import styles from './App.module.css';
 
@@ -26,9 +26,10 @@ const App = () => {
   return (
     <div className={styles.container}>
       <img className={styles.logo} src={covidLogo} alt="COVID-19" />
-      <Cards data={data} />
       <CountryPicker handleCountryChange={handleCountryChange} />
+      <Cards data={data} />
       <Chart data={data} country={country} />
+      <Footer />
     </div>
   );
 };
