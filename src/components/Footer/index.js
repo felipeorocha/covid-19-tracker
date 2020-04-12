@@ -2,10 +2,33 @@ import React from 'react';
 
 const Footer = () => (
   <footer>
-    <span>Dados servidos por John Hopkins University</span>
-    <p>Os dados nao devem ser utilizados para propositos comerciais.</p>
     <div>
-      <a href="https://github.com/mathdroid/covid-19-api">https://github.com/mathdroid/covid-19-api</a>
+      <p>
+        <span>Dados servidos por John Hopkins University.</span>
+        <br />
+        <span>
+          API&nbsp;
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/mathdroid/covid-19-api"
+          >
+            mathdroid
+          </a>
+          .
+        </span>
+      </p>
+      <p>
+        Created by&nbsp;
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/felipe-rocha-22a963120/"
+        >
+          Felipe Rocha
+        </a>
+        .
+      </p>
     </div>
   </footer>
 );
