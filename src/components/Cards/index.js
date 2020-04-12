@@ -50,5 +50,4 @@ Cards.defaultProps = {
   data: {},
 };
 
-
 export default Cards;
