@@ -8,10 +8,9 @@
 } */
 
 .inputCountry::before {
-  border-bottom: 1px solid rgb(125, 141, 32) !important;
+  border-bottom: 1px solid rgb(255, 255, 255) !important;
 }
 
 .inputCountry svg {
-  /* color: rgb(255, 255, 255) !important; */
-  color: rgb(197, 33, 33) !important;
+  color: rgb(255, 255, 255) !important;
 }
