@@ -23,7 +23,7 @@ const Footer = () => (
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://www.linkedin.com/in/felipe-rocha-22a963120/"
+          href="https://github.com/mr-undefined"
         >
           Felipe Rocha
         </a>
