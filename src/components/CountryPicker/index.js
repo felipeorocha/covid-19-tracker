@@ -10,9 +10,6 @@ import { fetchCountries } from '../../api';
 
 /* eslint-disable-next-line */
 const styled = theme => ({
-  root: {
-    background: 'blue',
-  },
   whiteColor: {
     color: 'white',
   },
@@ -39,9 +36,11 @@ const CountryPicker = ({ handleCountryChange, classes }) => {
         className={styles.inputCountry}
         onChange={e => handleCountryChange(e.target.value)}
       >
-        <input value="Global" />
+        <option value="">Global</option>
         {data.map(country => (
-          <input type="hidden" key={country} value={country} />
+          <option key={country} value={country}>
+            {country}
+          </option>
         ))}
       </Select>
     </FormControl>
