@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { NativeSelect, FormControl } from '@material-ui/core';
+import Select from '@material-ui/core/Select';
 
 import styles from './country-picker.module.css';
 
@@ -30,7 +31,7 @@ const CountryPicker = ({ handleCountryChange, classes }) => {
 
   return (
     <FormControl className={styles.formControl}>
-      <NativeSelect
+      <Select
         defaultValue=""
         classes={{
           root: classes.whiteColor,
@@ -44,7 +45,7 @@ const CountryPicker = ({ handleCountryChange, classes }) => {
             {country}
           </option>
         ))}
-      </NativeSelect>
+      </Select>
     </FormControl>
   );
 };
