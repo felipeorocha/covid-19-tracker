@@ -39,11 +39,9 @@ const CountryPicker = ({ handleCountryChange, classes }) => {
         className={styles.inputCountry}
         onChange={e => handleCountryChange(e.target.value)}
       >
-        <option value="">Global</option>
+        <input value="Global" />
         {data.map(country => (
-          <option key={country} value={country}>
-            {country}
-          </option>
+          <input type="hidden" key={country} value={country} />
         ))}
       </Select>
     </FormControl>
