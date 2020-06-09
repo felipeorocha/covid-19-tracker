@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import { NativeSelect, FormControl } from '@material-ui/core';
+import { FormControl } from '@material-ui/core';
 import Select from '@material-ui/core/Select';
-import MenuItem from "@material-ui/core/MenuItem";
+import MenuItem from '@material-ui/core/MenuItem';
 
 import styles from './country-picker.module.css';
 
@@ -30,14 +30,14 @@ const CountryPicker = ({ handleCountryChange, classes }) => {
   return (
     <FormControl className={styles.formControl}>
       <Select
-        defaultValue=""
+        defaultValue="Global"
         classes={{
           root: classes.whiteColor,
         }}
         className={styles.inputCountry}
         onChange={e => handleCountryChange(e.target.value)}
       >
-        <MenuItem value="">Global</MenuItem>
+        <MenuItem value="Global">Global</MenuItem>
         {data.map(country => (
           <MenuItem key={country} value={country}>
             {country}
