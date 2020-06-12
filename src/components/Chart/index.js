@@ -100,6 +100,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
 
   return (
     <div className={styles.container}>{country ? barChart : lineChart}</div>
+    // {country && country !== 'Global' ? barChart : lineChart}
   );
 };
 

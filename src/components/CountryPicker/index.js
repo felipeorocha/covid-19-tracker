@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import queryString from 'query-string';
+
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { FormControl } from '@material-ui/core';
@@ -16,6 +18,8 @@ const styled = theme => ({
   },
 });
 
+const parsed = queryString.parse(window.location.search);
+
 const CountryPicker = ({ handleCountryChange, classes }) => {
   const [data, setCountriesData] = useState([]);
 
@@ -30,7 +34,7 @@ const CountryPicker = ({ handleCountryChange, classes }) => {
   return (
     <FormControl className={styles.formControl}>
       <Select
-        defaultValue="Global"
+        defaultValue={parsed.country ? parsed.country : 'Global'}
         classes={{
           root: classes.whiteColor,
         }}

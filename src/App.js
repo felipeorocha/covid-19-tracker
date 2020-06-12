@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import queryString from 'query-string';
 
 import { Cards, CountryPicker, Chart, Footer } from './components';
 import { fetchData } from './api';
@@ -6,13 +7,15 @@ import styles from './App.module.css';
 
 import covidLogo from './assets/covid.png';
 
+const parsed = queryString.parse(window.location.search);
+
 const App = () => {
   const [data, setData] = useState({});
   const [country, setCountry] = useState('');
 
   useEffect(() => {
     const fetchApiData = async () => {
-      setData(await fetchData());
+      setData(await fetchData(parsed.country));
     };
 
     fetchApiData();
